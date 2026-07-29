@@ -1,0 +1,18 @@
+/* Style classes to reuse */
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #64b5f6;
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script defer data-domain="astaraeroespacial.github.io" src="https://plausible.io/js/script.js"></script>
+    <script data-goatcounter="https://lazcanoluca.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <title>Astar Aeroespacial</title>
+    <meta name="description" content="Equipo de desarrollo de cubesats y cargas útiles en la FIUBA." />
+    <meta property="og:image" content="https://AstarAeroespacial.github.io/logos/imagotipo.svg" />
+    <meta name="google-site-verification" content="_FMD8sALblCUzb-_98Se47MeorwZThEqnHPjLlQNEqY" />
+    <link rel="icon" href="https://AstarAeroespacial.github.io/logos/isotipo.png" />
+    <link rel="stylesheet" href="https://AstarAeroespacial.github.io/styles/styles.css" />
+    <link rel="stylesheet" href="https://AstarAeroespacial.github.io/styles/common.css" />
+    
+<link rel="stylesheet" href="https://AstarAeroespacial.github.io/styles/home.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="https://AstarAeroespacial.github.io" class="logo">
+            <img src="https://AstarAeroespacial.github.io/logos/logotipo-blanco.svg" alt="Astar Logo" />
+        </a>
+
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label for="menu-btn" class="menu-overlay"></label>
+        <label class="menu-icon" for="menu-btn">
+            <span class="navicon"></span>
+        </label>
+
+        <div class="header-right">
+            <!-- <div class="pill-button">
+                <input type="radio" name="lang" id="lang-es" checked>
+                <label for="lang-es" class="pill-option">ES</label>
+                <input type="radio" name="lang" id="lang-en">
+                <label for="lang-en" class="pill-option">EN</label>
+            </div> -->
+
+            <nav>
+                <ul class="menu">
+                    <label for="menu-btn" class="menu-close">✕</label>
+                    <li class="home-mobile-only">
+                        <a href="https://AstarAeroespacial.github.io"
+                            
+                            class="active"
+                            >
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="https://AstarAeroespacial.github.io/nosotros/" >
+                            Nosotros
+                        </a>
+                        <div class="nav-dropdown-menu">
+                            <a href="https://AstarAeroespacial.github.io/nosotros/#quienes-somos">Quiénes somos</a>
+                            <a href="https://AstarAeroespacial.github.io/nosotros/#equipo">Nuestro equipo</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://AstarAeroespacial.github.io/proyectos" >
+                            Proyectos
+                        </a>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="https://AstarAeroespacial.github.io/noticias/" >
+                            Noticias
+                        </a>
+                        <div class="nav-dropdown-menu">
+                            <a href="https://AstarAeroespacial.github.io/noticias/#eventos">Eventos</a>
+                            <a href="https://AstarAeroespacial.github.io/noticias/#medios">Medios</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://AstarAeroespacial.github.io/contact/" >
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+                
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                
+<div class="home-wrapper">
+  <div class="home-glow"></div>
+  <div class="home-glow-amber"></div>
+
+  <div class="home-stars">
+      <div class="star-layer" id="star-layer-1"></div>
+      <div class="star-layer" id="star-layer-2"></div>
+      <div class="star-layer" id="star-layer-3"></div>
+  </div>
+
+  <div class="home-reticle" aria-hidden="true">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="200" r="180" fill="none" stroke="#64b5f6" stroke-width="0.8"/>
+          <circle cx="200" cy="200" r="120" fill="none" stroke="#64b5f6" stroke-width="0.6"/>
+          <circle cx="200" cy="200" r="55" fill="none" stroke="#64b5f6" stroke-width="0.6"/>
+          <circle cx="200" cy="200" r="4" fill="#64b5f6" opacity="0.5"/>
+          <line x1="0" y1="200" x2="138" y2="200" stroke="#64b5f6" stroke-width="0.6"/>
+          <line x1="262" y1="200" x2="400" y2="200" stroke="#64b5f6" stroke-width="0.6"/>
+          <line x1="200" y1="0" x2="200" y2="138" stroke="#64b5f6" stroke-width="0.6"/>
+          <line x1="200" y1="262" x2="200" y2="400" stroke="#64b5f6" stroke-width="0.6"/>
+          <g class="reticle-orbit">
+              <ellipse cx="200" cy="200" rx="180" ry="55" fill="none" stroke="#ffb43c" stroke-width="0.6" opacity="0.6" transform="rotate(-25 200 200)"/>
+              <ellipse cx="200" cy="200" rx="180" ry="55" fill="none" stroke="#ffb43c" stroke-width="1.5" opacity="0.5" stroke-dasharray="35 500" stroke-dashoffset="-460" transform="rotate(-25 200 200)"/>
+              <circle class="reticle-satellite" cx="362" cy="150" r="3.5" fill="#ffb43c" opacity="0.8"/>
+          </g>
+      </svg>
+  </div>
+
+  <div class="home-hero">
+
+    <div class="home-label">Facultad de Ingeniería · UBA</div>
+     <img src="https://AstarAeroespacial.github.io/logos/logotipo-blanco.svg" alt="ASTAR Aeroespacial" class="home-logo">
+     <h1 class="home-title">Aeroespacial</h1>
+    <a href="https://AstarAeroespacial.github.io/proyectos" class="home-btn">Conocer más</a>
+  </div>
+
+  <div class="home-scroll-indicator" aria-hidden="true">
+    <div class="home-scroll-dot"></div>
+  </div>
+
+</div>
+
+<script>
+function generateStars(count, minSize, maxSize, opacity) {
+    const shadows = [];
+    for (let i = 0; i < count; i++) {
+        const x = Math.floor(Math.random() * 2000);
+        const y = Math.floor(Math.random() * 2000);
+        const size = (Math.random() * (maxSize - minSize) + minSize).toFixed(1);
+        const op = (Math.random() * 0.5 + opacity).toFixed(2);
+        shadows.push(`${x}px ${y}px 0 ${size}px rgba(255,255,255,${op})`);
+    }
+    return shadows.join(', ');
+}
+
+const layer1 = document.getElementById('star-layer-1');
+const layer2 = document.getElementById('star-layer-2');
+const layer3 = document.getElementById('star-layer-3');
+
+layer1.style.boxShadow = generateStars(200, 0, 0.5, 0.3);
+layer2.style.boxShadow = generateStars(100, 0.5, 1, 0.4);
+layer3.style.boxShadow = generateStars(40, 1, 1.5, 0.6);
+
+// One blue star
+layer3.style.boxShadow += ', 800px 400px 0 2px rgba(100,181,246,0.8)';
+</script>
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <img src="https://AstarAeroespacial.github.io/logos/imagotipo-cropped.svg" alt="Astar Logo" />
+                <div class="footer-text">
+                    Astar © 2026
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.linkedin.com/company/astar-aeroespacial/" target="_blank" rel="noopener">
+                    <img src="/icons/linkedin.svg" alt="LinkedIn" class="social-icon" />
+                </a>
+                <a href="https://www.instagram.com/astar_aeroespacial/" target="_blank" rel="noopener">
+                    <img src="/icons/instagram.svg" alt="Instagram" class="social-icon" />
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://AstarAeroespacial.github.io/js/mobile-menu-animation.js"></script>
+    <script src="https://AstarAeroespacial.github.io/js/nav-dropdown.js"></script>
+</body>
+</html>

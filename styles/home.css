@@ -1,0 +1,319 @@
+/* ── Reset ── */
+
+body:has(.home-hero) main {
+    padding: 0 !important;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+body:has(.home-hero) .section,
+body:has(.home-hero) .container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body:has(.home-hero) .footer {
+    display: none;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+/* ── Background layers (fixed) ── */
+
+.home-wrapper {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.home-glow {
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 50%;
+    background: radial-gradient(ellipse at center bottom, rgba(94, 174, 244, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.home-glow-amber {
+    position: absolute;
+    top: 0; right: 0;
+    width: 40%;
+    height: 40%;
+    background: radial-gradient(ellipse at top right, rgba(255,180,60,0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ── Star layers ── */
+
+@keyframes star-drift {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-1000px); }
+}
+
+.home-stars {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 70%;
+}
+
+.star-layer {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+}
+
+#star-layer-1 {
+    animation: star-drift 120s linear infinite;
+}
+
+#star-layer-2 {
+    animation: star-drift 80s linear infinite;
+}
+
+#star-layer-3 {
+    animation: star-drift 50s linear infinite;
+}
+
+/* ── Reticle orbit animation ── */
+
+@keyframes orbit-spin {
+    from { transform: rotate(-25deg); }
+    to   { transform: rotate(335deg); }
+}
+
+.reticle-orbit {
+    transform-origin: 200px 200px;
+    animation: orbit-spin 20s linear infinite;
+}
+
+/* ── Gradient pulse ── */
+
+@keyframes glow-pulse {
+    0%, 100% { opacity: 0.8; }
+    50%       { opacity: 1.4; }
+}
+
+.home-glow {
+    animation: glow-pulse 8s ease-in-out infinite;
+}
+
+/* ── Reticle ── */
+
+.home-reticle {
+    position: absolute;
+    right: 4%;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.12;
+    width: min(480px, 40vw);
+}
+
+.home-reticle svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ── Hero ── */
+
+.home-hero {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    margin-top: -6rem;
+}
+
+.home-label {
+    font-size: 0.70rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #64b5f6;
+    margin-bottom: 0rem;
+    opacity: 0.8;
+}
+
+.home-logo {
+    width: clamp(280px, 40vw, 560px);
+    height: auto;
+    margin-bottom: 1rem;
+    margin-top: 2.3rem;
+    filter: brightness(0) invert(1);
+}
+
+.home-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 4.3rem;
+    margin-top: -3rem;
+    text-shadow: 0 0 80px rgba(100,181,246,0.15);
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.home-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: -1;
+}
+
+.home-btn:hover {
+    color: #061323;
+    border-color: white;
+}
+
+.home-btn:hover::before {
+    opacity: 1;
+}
+
+/* ── Scroll indicator ── */
+
+@keyframes home-bounce {
+    0%, 100% { transform: translateY(0); opacity: 0.4; }
+    50%       { transform: translateY(4px); opacity: 0.9; }
+}
+
+.home-scroll-indicator {
+    position: absolute;
+    bottom: 5.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.home-scroll-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #64b5f6;
+    animation: home-bounce 1.8s ease-in-out infinite;
+}
+
+/* ── Stats ── */
+
+.home-stats {
+    position: absolute;
+    bottom: 2rem;
+    left: 0; right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    pointer-events: none;
+}
+
+.home-stat {
+    text-align: center;
+}
+
+.home-stat-value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.home-stat-label {
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #4a6080;
+    margin-top: 0.2rem;
+}
+
+.home-stat-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.07);
+    align-self: center;
+}
+
+/* ── Background ── */
+
+body:has(.home-hero) {
+    background:
+        radial-gradient(ellipse 80% 50% at 50% 100%, rgba(100,181,246,0.09) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 15% 0%, rgba(100,181,246,0.05) 0%, transparent 60%),
+        radial-gradient(ellipse 35% 30% at 88% 5%, rgba(255,180,60,0.05) 0%, transparent 60%),
+        linear-gradient(180deg, #06111f 0%, #0a1929 60%, #061323 100%);
+}
+
+/* ── Mobile ── */
+
+@media (max-width: 640px) {
+    .home-title {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+        letter-spacing: 2px;
+    }
+
+    .home-reticle {
+        width: 70vw;
+        right: 50%;
+        transform: translate(50%, -50%);
+        opacity: 0.06;
+    }
+    
+    .home-reticle {
+        display: none;
+    }
+
+    .home-glow-amber {
+        display: none;
+    }
+
+    .home-glow {
+        width: 300%;
+        left: -25%;
+        transform: none;
+    }
+}

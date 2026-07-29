@@ -1,0 +1,154 @@
+.markdown-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.markdown-content h2,
+.markdown-content h3 {
+    text-align: center;
+    color: #64b5f6;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.markdown-content ul {
+    margin: 1.5rem auto;
+    padding-left: 1.5rem;
+    max-width: 500px;
+}
+
+.markdown-content li {
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.markdown-content p {
+    text-align: left;
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+    color: #e3eaf3;
+    line-height: 1.6;
+}
+
+.markdown-content a {
+    color: #64b5f6;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    width: fit-content;
+}
+
+.markdown-content p:has(a) {
+    text-align: right;
+}
+
+.markdown-content a:hover {
+    color: #64b5f6;
+    text-decoration: underline;
+}
+
+.markdown-content a:visited {
+    color: #64b5f6;
+}
+
+/* Team Section Styles */
+.team-section {
+    margin: 2rem 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 0;
+}
+
+.team-member {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 160px;
+}
+
+.team-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 0.5rem;
+    display: block;
+    flex-shrink: 0;
+}
+
+.team-member>.team-member-name {
+    color: #e3eaf3;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 0.2rem 0;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.team-member>.team-member-description {
+    font-size: 0.9rem;
+    color: #e3eaf3;
+    /*less margin above, more below*/
+    margin: 0.2rem 0 0.6rem 0;
+    line-height: 1.3;
+    flex-grow: 1;
+    /* ensure it centers event if multiline*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.team-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: auto;
+}
+
+.team-link {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin: 0 !important;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.team-link img {
+    filter: brightness(0) invert(1);
+    width: 24px;
+    height: 24px;
+}
+
+.team-link:hover {
+    opacity: 1;
+    text-decoration: none !important;
+}
+
+.team-link:hover img {
+    filter: brightness(0) saturate(100%) invert(58%) sepia(73%) saturate(1234%) hue-rotate(188deg) brightness(96%) contrast(94%);
+}
+
+.team-link:visited {
+    opacity: 0.8;
+}

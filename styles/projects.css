@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.page-title {
+    text-align: center;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+
+.page-subtitle {
+    text-align: center;
+    color: #9ab0c8;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 640px;
+    margin: 0 auto 3rem;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(16px);
+}
+
+.fade-in.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.zigzag {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 860px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(16px);
+}
+
+.zigzag.reverse {
+    flex-direction: row-reverse;
+}
+
+.zigzag.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.zigzag-image {
+    flex: 0 0 42%;
+}
+
+.zigzag-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+}
+
+.zigzag-text {
+    flex: 1;
+}
+
+.zigzag-text h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.35rem;
+    margin: 0.3rem 0 0.6rem;
+    letter-spacing: 0.5px;
+}
+
+.zigzag-text p {
+    color: #9ab0c8;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin: 0 0 1.1rem;
+}
+
+.zigzag-text a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    padding: 0.5rem 1.2rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.zigzag-text a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: -1;
+}
+
+.zigzag-text a:hover {
+    color: black;
+    border-color: white;
+}
+
+.zigzag-text a:hover::before {
+    opacity: 1;
+}
+
+.zigzag-divider {
+    max-width: 860px;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0 1.5rem;
+}
+
+.status {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    padding: 0.28rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+}
+
+.status.finalizado {
+    background: rgba(80, 220, 120, 0.12);
+    border: 1px solid #50dc78;
+    color: #50dc78;
+}
+
+.status.proceso {
+    background: rgba(255, 180, 60, 0.12);
+    border: 1px solid #ffb43c;
+    color: #ffb43c;
+} 
+
+/* Mobile */
+@media (max-width: 640px) {
+    .zigzag,
+    .zigzag.reverse {
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 1.25rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+    }
+
+    .zigzag-image {
+        flex: none;
+        width: 100%;
+    }
+
+    .zigzag-text h2 {
+        font-size: 1.15rem;
+    }
+
+    .zigzag-divider {
+        display: none;
+    }
+}
